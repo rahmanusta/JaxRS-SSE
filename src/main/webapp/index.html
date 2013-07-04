@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class=" js no-touch svg inlinesvg svgclippaths no-ie8compat js no-touch svg inlinesvg svgclippaths no-ie8compat">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="http://cdn.jsdelivr.net/foundation/4.0.4/css/foundation.min.css">
+    <link type="text/css" rel="stylesheet" href="http://cdn.jsdelivr.net/foundation/4.0.4/css/normalize.css">
+</head>
+<body>
+
+<!-- Header and Nav -->
+
+<div class="row">
+    <div class="large-12 columns">
+        <div class="panel">
+            <div class="row">
+                <div class="large-6 columns">
+                    <h1>Twitter Search Broadcaster</h1>
+                </div>
+                <div class="large-6 columns" >
+                    Pushes new data searhed for Java EE in every 30 seconds.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End Header and Nav -->
+<div class="row" id="alertbox" style="display: none;">
+    <div class="large-12 columns">
+        <span class="alert-box alert">Your browser doesn not support HTML 5 SSE :(</span>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Feed Placeholder -->
+    <div id="feeds" class="large-12 columns"></div>
+
+</div>
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr>
+        <div class="row">
+            <div class="large-12 columns">
+                <p>© Twitter Search Broadcaster | kodcu.com</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/x-mustache-template" id="feedTemplate">
+    {{#.}}
+    <!-- Feed Entry -->
+    <div class="row">
+        <div class="large-1 columns small-3"><img style="min-height: 60px;min-width: 60px;" src="{{profile_image_url}}">
+        </div>
+        <div class="large-11 columns">
+            <div class="row">
+                <div class="large-12 columns">
+                    <p><strong>{{from_user_name}} said:</strong> {{text}}</p>
+                </div>
+                <div class="large-12 columns">
+                    <p><strong>Created date:</strong> {{created_at}}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End Feed Entry -->
+
+    <hr>
+    {{/.}}
+</script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+<script type="text/javascript" src="resources/jaxrs-sse.js"></script>
+</body>
+</html>
