@@ -25,7 +25,7 @@ public class SearchResource {
 
     static {
 
-        sch.scheduleWithFixedDelay(new SearchTwitTask(BROADCASTER),0,30,TimeUnit.SECONDS);
+        sch.scheduleWithFixedDelay(new SearchTwitTask(BROADCASTER),10,30,TimeUnit.SECONDS);
 
     }
 

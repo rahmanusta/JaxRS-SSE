@@ -38,10 +38,10 @@ public class SearchTwitTask implements Runnable {
 
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
-                .setOAuthConsumerKey("************")
-                .setOAuthConsumerSecret("************")
-                .setOAuthAccessToken("************")
-                .setOAuthAccessTokenSecret("************");
+                .setOAuthConsumerKey("vdZDOZ954TkilqtVQn8e6g")
+                .setOAuthConsumerSecret("oFHfR73bKTdDd6Rmm57V2IwVzYZthum9c6HfDhZELJ4")
+                .setOAuthAccessToken("162347395-R7mB6I6kpIB0nlg9TbDmK3Ql1uzWMerblVJzVcFw")
+                .setOAuthAccessTokenSecret("FsoKjbK4Uga1yPwwP1zS6Ltip91pB8iFKwyQhaRqgDhTY");
 
         Twitter twitter = new TwitterFactory(cb.build()).getInstance();
 
@@ -63,7 +63,7 @@ public class SearchTwitTask implements Runnable {
         OutboundEvent.Builder b = new OutboundEvent.Builder();
         b.mediaType(MediaType.APPLICATION_JSON_TYPE);
 
-        broadcaster.broadcast(b.data(String.class,twitJsonArray).build());
+        broadcaster.broadcast(b/*.name("feed")*/.data(String.class,twitJsonArray).build());
 
     }
 }

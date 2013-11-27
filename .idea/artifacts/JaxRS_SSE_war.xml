@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="JaxRS-SSE:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="JaxRS-SSE-1.0.war">
+      <element id="artifact" artifact-name="JaxRS-SSE:war exploded" />
+    </root>
+  </artifact>
+</component>

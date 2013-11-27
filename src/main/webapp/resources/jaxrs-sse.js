@@ -13,6 +13,14 @@
     eventSource.onerror = function (e) {
         console.log("Error");
     };
+    /*
+    eventSource.addEventListener("feed",
+        function (e) {
+            console.log(e);
+            var feedTemplate = $("#feedTemplate").html();
+            var feeds = Mustache.render(feedTemplate, $.parseJSON(e.data));
+            $("#feeds").html(feeds);
+        });   */
 
     eventSource.onmessage=function (e) {
         console.log(e);
